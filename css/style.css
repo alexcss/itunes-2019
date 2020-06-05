@@ -17,3 +17,14 @@
 .ba-page-subtitle{
 	font-weight: 200;
 }
+
+.ba-search-form{
+	max-width: 500px;
+	margin: 0 auto 30px;
+	display: flex;
+	align-items: center;
+}
+.ba-search-form .input-field{
+	flex-grow: 1;
+	margin: 0 20px 0 0;
+}
