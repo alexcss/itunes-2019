@@ -28,7 +28,7 @@
 		<form action="https://itunes.apple.com/search" class="card-panel ba-search-form" data-search>
 
 			<div class="input-field">
-				<input value="Vitalika" id="query" type="text" name="query" required class="validate">
+				<input value="Vitas" id="query" type="text" name="query" required class="validate">
 				<label for="query" class="">Enter tag for search</label>
 			</div>
 			<button type="submit" class="btn-floating btn-large waves-effect waves-light pink">
@@ -36,12 +36,43 @@
 			</button>
 
 		</form>
+		<div class="divider"></div>
+		<!-- /.divider -->
 		<div class="ba-tunes-list" data-list>
 			<template data-tmpl>
-				<audio src="{{audio}}" controls></audio>
-				<img src="{{img}}" alt="">
-				<h3>{{title}}</h3>
+				<div class="card hoverable">
+					<div class="card-image">
+						<img src="{{cover}}" alt="{{AlbumName}}">
+						<h3 class="card-title">{{Artist}}</h3>
+						<button data-track-id="{{trackId}}" class="btn-floating btn-large halfway-fab waves-effect waves-light purple">
+							<i class="material-icons play">play_arrow</i>
+							<i class="material-icons pause">pause</i>
+						</button>
+						<audio id="{{trackId}}" src="{{audio}}" ></audio>
+					</div>
+					<div class="card-content">
+						<h4 class="card-title">{{SongName}}</h4>
+						<p>Album - {{AlbumName}}</p>
+						<p class="grey-text text-lighten-1">
+							Genre - {{GenreName}}						
+							<span class="new badge blue" data-badge-caption>
+								<i class="material-icons tiny">access_time</i>
+								{{duration}}
+							</span>
+						</p>					
+	
+					</div>
+					<div class="card-action">
+						<a href="{{collectionViewUrl}}" target="_blank">
+							<i class="material-icons tiny">shopping_cart</i>	
+							Buy collection - {{price}}
+						</a>
+					</div>
+				</div>
+				<!-- /.card -->
 			</template>
+
+
 		</div>
 
 	</main>
